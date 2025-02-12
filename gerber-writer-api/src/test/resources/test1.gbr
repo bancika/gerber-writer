@@ -1,4 +1,4 @@
-G04 #@! TF.CreationDate,2025-02-12T11:55:07*
+G04 #@! TF.CreationDate,+1000000000-01-01T00:00:00*
 G04 #@! TF.FileFunction,Copper,L1,Top,Signal*
 G04 #@! TF.FilePolarity,Positive*
 G04 #@! TF.GenerationSoftware,Bancika,gerber_writer_example.java,1.0.0-alpha*

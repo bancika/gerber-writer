@@ -231,6 +231,10 @@ public class DataLayer {
     }
 
     public String dumpGerberToString() {
+        return dumpGerberToString(LocalDateTime.now());
+    }
+
+    public String dumpGerberToString(LocalDateTime now) {
         StringBuilder commands = new StringBuilder();
         Map<String, Integer> apertures = new HashMap<>();
         Set<String> macros = new HashSet<>();
@@ -241,7 +245,6 @@ public class DataLayer {
         GraphicsState state = new GraphicsState();
 
         // Header
-        LocalDateTime now = LocalDateTime.now();
         commands.append(String.format("G04 #@! TF.CreationDate,%s*\n",
                 now.format(DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss"))));
         

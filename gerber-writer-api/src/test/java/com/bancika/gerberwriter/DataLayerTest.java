@@ -4,13 +4,19 @@ import com.bancika.gerberwriter.padmasters.*;
 import com.bancika.gerberwriter.path.Path;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.time.LocalDateTime;
+
 import static com.bancika.gerberwriter.GerberFunctions.*;
 import static com.bancika.gerberwriter.GerberFunctions.CONDUCTOR;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class DataLayerTest {
     
     @Test
-    void testGenerateCopperLayer() {
+    void testGenerateCopperLayer() throws IOException {
         
         GenerationSoftware genSoftware = new GenerationSoftware(
                 "Bancika",
@@ -159,7 +165,9 @@ class DataLayerTest {
         top.addPad(viaPadHole, traceStart);
         top.addPad(viaPadHole, new Point(traceStart.x + 3, traceStart.y + 6));
 
-        String gerber = top.dumpGerberToString();
-        System.out.println(gerber);
+        String gerber = top.dumpGerberToString(LocalDateTime.MIN);
+        String content = new String(Files.readAllBytes(Paths.get("src/test/resources/test1.gbr")));
+        assertEquals(content, gerber);
+//        System.out.println(gerber);
     }
 }
