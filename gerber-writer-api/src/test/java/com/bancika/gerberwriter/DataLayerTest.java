@@ -13,9 +13,9 @@ class DataLayerTest {
     void testGenerateCopperLayer() {
         
         GenerationSoftware genSoftware = new GenerationSoftware(
-                "Karel Tavernier",
+                "Bancika",
                 "gerber_writer_example.java",
-                "2024.03"
+                "1.0.0-alpha"
         );
 
         // Initialize parameters
@@ -105,7 +105,7 @@ class DataLayerTest {
         // Embedded via pad in copper pour
         top.addPad(viaPad, new Point(xLeft + radius, yTop - radius));
 
-//         Connect pin one of IC16 to copper pour
+        // Connect pin one of IC16 to copper pour
         top.addTraceLine(
                 footprint[0],
                 new Point(56.515, 47.879 + 2.54),
