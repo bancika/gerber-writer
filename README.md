@@ -16,8 +16,7 @@ Direct port of Python library https://github.com/Karel-Tavernier/gerber_writer
 
 Example
 
-`
-GenerationSoftware genSoftware = new GenerationSoftware(
+        GenerationSoftware genSoftware = new GenerationSoftware(
                 "Bancika",
                 "gerber_writer_example.java",
                 "1.0.0-alpha"
@@ -164,7 +163,7 @@ GenerationSoftware genSoftware = new GenerationSoftware(
         top.addPad(viaPadHole, traceStart);
         top.addPad(viaPadHole, new Point(traceStart.x + 3, traceStart.y + 6));
 
-        String gerber = top.dumpGerberToString();`
+        String gerber = top.dumpGerberToString();
 
 this produces the following gerber [file](https://github.com/bancika/gerber-writer/blob/922c2e61cf88d48e2b50e0d4de042358411aca93/gerber-writer-api/src/test/java/com/bancika/gerberwriter/test1.gbr).
 
