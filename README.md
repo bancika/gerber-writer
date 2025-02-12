@@ -165,6 +165,6 @@ Example
 
         String gerber = top.dumpGerberToString();
 
-this produces the following gerber [file](https://github.com/bancika/gerber-writer/blob/922c2e61cf88d48e2b50e0d4de042358411aca93/gerber-writer-api/src/test/java/com/bancika/gerberwriter/test1.gbr).
+this produces the following gerber [file](https://github.com/bancika/gerber-writer/blob/main/gerber-writer-api/src/test/resources/test1.gbr?raw=true).
 
-![Gerber Example](https://github.com/bancika/gerber-writer/blob/922c2e61cf88d48e2b50e0d4de042358411aca93/gerber-writer-api/src/test/java/com/bancika/gerberwriter/test1.png?raw=true "Test1")
+![Gerber Example](https://github.com/bancika/gerber-writer/blob/main/gerber-writer-api/src/test/resources/test1.png?raw=true "Test1")
