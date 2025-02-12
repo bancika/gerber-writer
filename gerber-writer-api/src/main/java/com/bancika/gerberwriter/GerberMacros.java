@@ -1,11 +1,5 @@
 package com.bancika.gerberwriter;
 
-/**
- * Strings defining macros used by the gerber_writer
- * Copyright: Karel Tavernier
- * Date: 20-Jun-2022
- * License: Apache 2.0 License
- */
 public final class GerberMacros {
 
     public static final String MACRO_RECTANGLE = """
