@@ -33,6 +33,10 @@ public class DataLayer {
         this.generationSoftware = generationSoftware;
     }
 
+    public String getFunction() {
+        return function;
+    }
+
     // Add methods
     public void addPad(AbstractPad master, Point position, double angle) {
         validatePadMaster(master);

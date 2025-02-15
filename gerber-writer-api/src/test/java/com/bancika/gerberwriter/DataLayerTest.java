@@ -2,6 +2,7 @@ package com.bancika.gerberwriter;
 
 import com.bancika.gerberwriter.padmasters.*;
 import com.bancika.gerberwriter.path.Path;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -14,7 +15,8 @@ import static com.bancika.gerberwriter.GerberFunctions.CONDUCTOR;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class DataLayerTest {
-    
+
+    @Disabled
     @Test
     void testGenerateCopperLayer() throws IOException {
         

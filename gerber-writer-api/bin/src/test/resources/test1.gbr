@@ -1,0 +1,184 @@
+G04 #@! TF.CreationDate,+1000000000-01-01T00:00:00*
+G04 #@! TF.FileFunction,Copper,L1,Top,Signal*
+G04 #@! TF.FilePolarity,Positive*
+G04 #@! TF.GenerationSoftware,Bancika,gerber_writer_example.java,1.0.0-alpha*
+%MOMM*%
+%FSLAX36Y36*%
+G75*
+%AMRectangle*
+0 Rectangle with straight corners*
+0 Uses primitive 4 only, without calculations*
+0 $1 xsize/2*
+0 $2 ysize/2*
+0 $3 rotation angle*
+4,1,4,
+$1,$2,
+$1,-$2,
+-$1,-$2,
+-$1,$2,
+$1,$2,
+$3*
+%
+%AMRoundedRectangle*
+0 Rectangle with rounded corners*
+0 Uses primitive 1 and 4 only, without calculations*
+0 $1 xsize/2*
+0 $2 ysize/2*
+0 $3 xsize/2-radius*
+0 $4 ysize/2-radius*
+0 $5 rotation angle*
+0 $6 diameter*
+0 $7 x of center of first quadrant circle*
+0 $8 y of center of first quadrant circle*
+0 $9 x of center of 2nd quadrant circle*
+0 $10 y of center of 2nd quadrant circle*
+4,1,8,
+$3,$2,
+$1,$4,
+$1,-$4,
+$3,-$2,
+-$3,-$2,
+-$1,-$4,
+-$1,$4,
+-$3,$2,
+$3,$2,
+$5*
+1,1,$6,$7,$8*
+1,1,$6,-$7,-$8*
+1,1,$6,$9,$10*
+1,1,$6,-$9,-$10*
+%
+%AMRoundedThermal*
+0 Circular thermal with rounded corners*
+0 $1 outer diameter*
+0 $2 inner diameter*
+0 $3 gap of straight thermal primitive*
+0 $4 rotation angle*
+0 $5 diameter rounding circles*
+0 $6 x coordinate of q1 along h axis circle, rotated*
+0 $7 y coordinate of q1 along h axis circle, rotated*
+0 $8 x coordinate of q1 along v axis circle, rotated*
+0 $9 y coordinate of q1 along v axis circle, rotated*
+7,0,0,$1,$2,$3,$4*
+1,1,$5,$6,$7*
+1,1,$5,-$7,$6*
+1,1,$5,-$6,-$7*
+1,1,$5,$7,-$6*
+1,1,$5,$8,$9*
+1,1,$5,-$9,$8*
+1,1,$5,-$8,-$9*
+1,1,$5,$9,-$8*
+1,0,$2,0,0*
+%
+G04 #@! TA.AperFunction,SMDPad,CuDef*
+G04 #@! TAShape,Rectangle,1.270000,2.540000,45.000000*
+%ADD10Rectangle,0.635000X1.270000X45.000000*%
+G04 #@! TD*
+G04 #@! TA.AperFunction,Conductor*
+G04 #@! TAShape,Circle,0.254000*
+%ADD11C,0.254000*%
+G04 #@! TD*
+G04 #@! TA.AperFunction,ConnectorPad*
+G04 #@! TAShape,Circle,0.508000*
+%ADD12C,0.508000*%
+G04 #@! TD*
+G04 #@! TA.AperFunction,ConnectorPad*
+G04 #@! TAShape,Circle,0.208000*
+%ADD13C,0.208000*%
+G04 #@! TD*
+G04 #@! TA.AperFunction,SMDPad,CuDef*
+G04 #@! TAShape,RoundedRectangle,1.257000,2.286000,0.254000,0.000000*
+%ADD14RoundedRectangle,0.628500X1.143000X0.374500X0.889000X0.000000X0.508000X0.374500X0.889000X-0.374500X0.889000*%
+G04 #@! TD*
+G04 #@! TA.AperFunction,ThermalReliefPad*
+G04 #@! TAShape,RoundedThermal,1.000000,0.800000,0.060000,45.000000*
+%ADD15RoundedThermal,1.000000X0.800000X0.182911X45.000000X0.103913X0.440485X0.081952X0.081952X0.440485X0.800000*%
+G04 #@! TD*
+%LPD*%
+D10*
+X65093999Y47269000D03*
+X68047000Y50267000D03*
+D11*
+X65093999Y47269000D02*
+G01*
+X66093999Y48269000D01*
+D12*
+X66093999Y48269000D03*
+%LPC*%
+D13*
+X66093999Y48269000D03*
+%LPD*%
+D14*
+X56515000Y47879000D03*
+X60341000Y47879000D03*
+X58428000Y43700000D03*
+D11*
+X60341000Y47879000D02*
+X62549000Y47879000D01*
+X64349999Y49657000D01*
+D12*
+X64349999Y49657000D03*
+%LPC*%
+D13*
+X64349999Y49657000D03*
+%LPD*%
+D11*
+X58428000Y43700000D02*
+X65000000Y43700000D01*
+X69800000Y48500000D01*
+X68047000Y50267000D01*
+G04 #@! TA.AperFunction,Conductor*
+G36*
+X55000000Y50000000D02*
+X60800000Y50000000D01*
+G03*
+X63000000Y52200000I0J2200000D01*
+G01*
+X63000000Y56000000D01*
+X55000000Y56000000D01*
+X55000000Y50000000D01*
+G37*
+G04 #@! TD*
+%LPC*%
+D15*
+X60800000Y52200000D03*
+%LPD*%
+D12*
+X57200000Y53800000D03*
+D11*
+X56515000Y47879000D02*
+X56515000Y50419000D01*
+D12*
+X64000000Y53000000D03*
+D11*
+X64000000Y54000000D01*
+G02*
+X66000000Y56000000I2000000J0D01*
+G03*
+X67000000Y57000000I0J1000000D01*
+G01*
+X67000000Y59000000D01*
+D12*
+X67000000Y59000000D03*
+%LPC*%
+D13*
+X64000000Y53000000D03*
+X67000000Y59000000D03*
+%LPD*%
+D12*
+X65000000Y53000000D03*
+D11*
+X65000000Y54000000D01*
+G02*
+X66000000Y55000000I1000000J0D01*
+G03*
+X68000000Y57000000I0J2000000D01*
+G01*
+X68000000Y59000000D01*
+D12*
+X68000000Y59000000D03*
+%LPC*%
+D13*
+X65000000Y53000000D03*
+X68000000Y59000000D03*
+M02*
