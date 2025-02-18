@@ -10,4 +10,5 @@ public class GerberFunctions {
     public static final String CONNECTOR_PAD = "ConnectorPad";
     public static final String COMPONENT_DRILL = "ComponentDrill";
     public static final String PROFILE = "Profile";
+    public static final String MATERIAL = "Material";
 }
