@@ -2,7 +2,6 @@ package com.bancika.gerberwriter;
 
 import com.bancika.gerberwriter.padmasters.*;
 import com.bancika.gerberwriter.path.Path;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
@@ -16,7 +15,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class DataLayerTest {
 
-    @Disabled
     @Test
     void testGenerateCopperLayer() throws IOException {
         
@@ -168,7 +166,8 @@ class DataLayerTest {
         top.addPad(viaPadHole, new Point(traceStart.x + 3, traceStart.y + 6));
 
         String gerber = top.dumpGerberToString(LocalDateTime.MIN);
-        String content = new String(Files.readAllBytes(Paths.get("src/test/resources/test1.gbr")));
+        String content = new String(Files.readAllBytes(Paths.get("src/test/resources/test1.gbr")))
+                .replaceAll("\\n|\\r\\n", System.getProperty("line.separator"));
         assertEquals(content, gerber);
 //        System.out.println(gerber);
     }
